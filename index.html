@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Strength Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <button id="themeToggle">🌙 Dark Mode</button>
+
+  <h1>🔐 Password Strength Checker</h1>
+
+  <div class="input-row">
+    <input type="password" id="password" placeholder="Enter password">
+    <button id="togglePassword">👁️</button>
+  </div>
+
+  <div class="strength-box">
+    <div id="strength-bar"></div>
+  </div>
+
+  <h3 id="strength-text">Strength: -</h3>
+
+  <div class="dashboard">
+    <div class="card">
+      <h4>Length</h4>
+      <p id="lengthScore">0</p>
+    </div>
+
+    <div class="card">
+      <h4>Entropy</h4>
+      <p id="entropyScore">0 bits</p>
+    </div>
+
+    <div class="card">
+      <h4>Risk</h4>
+      <p id="riskLevel">-</p>
+    </div>
+
+    <div class="card">
+      <h4>Crack Time</h4>
+      <p id="crackTime">-</p>
+    </div>
+  </div>
+
+  <h3>Requirements</h3>
+
+  <ul>
+    <li id="length">8+ Characters</li>
+    <li id="uppercase">Uppercase Letter</li>
+    <li id="lowercase">Lowercase Letter</li>
+    <li id="number">Number</li>
+    <li id="special">Special Character</li>
+    <li id="breached">Not Common Password</li>
+  </ul>
+
+  <h3>Recommendations</h3>
+  <ul id="recommendations"></ul>
+
+  <button id="generateBtn">
+    Generate Secure Password
+  </button>
+
+  <h3>Password History</h3>
+  <ul id="history"></ul>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
